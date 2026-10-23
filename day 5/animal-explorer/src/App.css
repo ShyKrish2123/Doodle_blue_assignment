@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #166534;
+  font-size: 36px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.animal-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.animal-card h2 {
+  color: #166534;
+}
+
+button,
+.wiki-button {
+  border: none;
+  background: #15803d;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+button:hover,
+.wiki-button:hover {
+  background: #166534;
+}
+
+.details {
+  margin-top: 35px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.7;
+}
+
+.details h2 {
+  color: #166534;
+  font-size: 28px;
+}
+
+.close-button {
+  float: right;
+  background: #dc2626;
+}
+
+.close-button:hover {
+  background: #b91c1c;
+}
+
+.wiki-button {
+  margin-top: 10px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}

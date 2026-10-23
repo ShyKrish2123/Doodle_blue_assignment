@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyam K - Resume</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: black;
+        margin: 30px;
+        transition: 0.3s;
+    }
+
+    .dark {
+        background-color: #1e1e1e;
+        color: white;
+    }
+
+    h1, h2 {
+        color: darkblue;
+    }
+
+    .dark h1, .dark h2 {
+        color: #66d9ef;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid gray;
+        padding: 8px;
+    }
+
+    th {
+        background-color: lightblue;
+        color: black;
+    }
+
+    .dark th {
+        background-color: #333;
+        color: white;
+    }
+
+    a {
+        color: blue;
+    }
+
+    .dark a {
+        color: #66d9ef;
+    }
+
+    button {
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    #profilePic {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #photoContainer {
+        text-align: center;
+    }
+
+    .resume-link {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-align: center;
+    }
+
+    .resume-link a {
+        display: inline-block;
+        background-color: darkblue;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .resume-link a:hover {
+        background-color: royalblue;
+    }
+
+    .dark .resume-link a {
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<button id="themeButton" onclick="changeTheme()">
+    Dark Mode
+</button>
+
+<div class="resume-link">
+    <a href="SHYAM K_resume.pdf"
+       target="_blank"
+       onclick="countClicks()">
+         View My Resume
+    </a>
+
+    <p>Public visit: <span id="count">0</span></p>
+</div>
+
+<h1 align="center">SHYAM K</h1>
+
+<div id="photoContainer">
+
+    <img id="profilePic"
+         src="TCS.jpg"
+         alt="Shyam's Profile Picture"
+         onclick="this.hidden = true; document.getElementById('showPhoto').hidden = false;">
+
+    <br>
+
+    <button id="showPhoto" hidden
+            onclick="document.getElementById('profilePic').hidden = false; this.hidden = true;">
+        Show My Photo
+    </button>
+
+    <p>Click my photo to hide it!</p>
+
+</div>
+
+<p align="center">
+    Email:
+    <a href="mailto:2316155@saec.ac.in">2316155@saec.ac.in</a>
+    <br>
+
+    Phone:
+    <a href="tel:7904043586">7904043586</a>
+    <br>
+
+    LinkedIn:
+    <a href="https://www.linkedin.com/in/iamshyam-2k35/"
+       target="_blank">
+        LinkedIn Profile
+    </a>
+</p>
+
+<hr>
+
+<h2>Profile Objective</h2>
+
+<p>
+    Machine Learning enthusiast with strong foundations in Python,
+    Data Structures, and Artificial Intelligence. Experienced in
+    building computer vision and NLP systems. Active problem solver
+    on LeetCode and hands-on with cloud technologies using
+    Google Cloud Platform.
+</p>
+
+<h2>Education</h2>
+
+<table>
+    <tr>
+        <th>Qualification</th>
+        <th>CGPA / Percentage</th>
+    </tr>
+
+    <tr>
+        <td>B.E. Computer Science and Engineering</td>
+        <td>7.85 CGPA</td>
+    </tr>
+
+    <tr>
+        <td>Higher Secondary (12th)</td>
+        <td>82.66%</td>
+    </tr>
+
+    <tr>
+        <td>SSLC (10th)</td>
+        <td>63.6%</td>
+    </tr>
+</table>
+
+<h2>Technical Skills</h2>
+
+<ul>
+    <li>Programming Languages: Python, SQL</li>
+    <li>Operating Systems: Linux, Windows</li>
+    <li>Machine Learning: Scikit-learn, TensorFlow, Keras, PyTorch</li>
+    <li>Data Science: Pandas, NumPy, Matplotlib</li>
+    <li>Cloud Technologies: GCP, Azure</li>
+</ul>
+
+<h2>Projects</h2>
+
+<ol>
+    <li>TMDb Movie Search Application</li>
+    <li>Text Similarity Engine (NLP)</li>
+    <li>Vision-Based Game Controller</li>
+</ol>
+
+<h2>Internship</h2>
+
+<p>
+    Full Stack Developer Intern — Worked on web development
+    and AI-related projects.
+</p>
+
+<h2>Achievements</h2>
+
+<ul>
+    <li>Participated in Smart India Hackathon (SIH) 2025.</li>
+    <li>Ranked among the Top 100 Campus Ambassadors at Techfest, IIT Bombay, 2025.</li>
+</ul>
+
+<h2>Languages Known</h2>
+
+<ul>
+    <li>English</li>
+    <li>Tamil</li>
+</ul>
+
+<hr>
+
+<p align="center">
+    Declaration: I hereby declare that the information provided above
+    is true to the best of my knowledge.
+</p>
+
+<p align="right">
+    Signature: Shyam K
+</p>
+
+<script>
+    let clicks = 0;
+
+    function countClicks() {
+        clicks++;
+        document.getElementById("count").textContent = clicks;
+    }
+
+    function changeTheme() {
+        document.body.classList.toggle("dark");
+
+        let button = document.getElementById("themeButton");
+
+        if (document.body.classList.contains("dark")) {
+            button.textContent = "Light Mode";
+        } else {
+            button.textContent = "Dark Mode";
+        }
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app.light {
+  background-color: #f9fafb;
+  color: #222;
+}
+
+.app.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.app h1 {
+  color: #2563eb;
+  margin-bottom: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.navbar button,
+.theme-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover,
+.theme-button:hover {
+  background-color: #1d4ed8;
+}
+
+.content {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #f3f4f6;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app.dark .content {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.content h1 {
+  font-size: 28px;
+  color: #2563eb;
+}
+
+.content p {
+  line-height: 1.8;
+}
+
+.app.dark .content p {
+  color: #d1d5db;
+}
